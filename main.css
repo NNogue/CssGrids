@@ -1,6 +1,6 @@
 body {
 	font-family: sans-serif;
-	padding:2%;
+	margin: 0;
 }
 
 img {
@@ -22,9 +22,55 @@ img {
 
 .header {
 	grid-area: header;
-	text-align: center;
   	background: linear-gradient(to right, #cef1ff , #abe5fc);
   	font-size:28px;
+  	border-bottom: 3px #ff8d3d solid;
+  	position: fixed;
+  	width: 100%;
+  	box-shadow: 0 5px 5px #aaa;
+  	display:grid;
+  	grid-template-columns: 1fr 5fr 1fr 1fr;
+  	grid-template-areas:
+  		"logo null about contact";
+
+ }
+
+ .header .cssgrid{
+ 	margin-left: 15%;
+ 	grid-area:logo;
+ }
+
+ .header .cssgrid p{
+ 	float:left;
+ }
+
+ .header .cssgrid #hCss {
+ 	color:#ff5c30;
+ }
+
+ .header .cssgrid #hGrid {
+ 	color:#ff9b30;
+ }
+
+.header a{
+ 	text-decoration: none;
+ 	color:#ff9b30;
+ 	transition-duration: 0.2s;
+ }
+
+.header a:hover{
+ 	color:#ff7700;
+ }
+
+.header .about {
+ 	grid-area:about;
+ 	text-align: center;
+
+ }
+
+.header .contact {
+ 	grid-area:contact;
+ 	text-align: center;
  }
 
 .image {
@@ -39,6 +85,7 @@ img {
 	border-radius: 10px;
 	background: #fff7e0;
 	transition-duration: 0.4s;
+	margin-right: 1em;
 }
 
 .sidebar:hover {
@@ -55,6 +102,7 @@ img {
 	border-radius: 10px;
 	background: #fff7e0;
 	transition-duration: 0.4s;
+	margin-left: 1em;
 }
 
 .main:hover {
@@ -72,5 +120,5 @@ img {
 }
 
 .footer p{
-	padding:20px;
+	font-size: 28px;
 }
